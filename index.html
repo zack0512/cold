@@ -1,1 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>每週笑話</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: #f4f7f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .joke-card {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      padding: 32px;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .tag {
+      display: inline-block;
+      background-color: #e0f2fe;
+      color: #0369a1;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+
+    .question {
+      font-size: 1.25rem;
+      color: #1e293b;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .btn {
+      background-color: #2563eb;
+      color: #ffffff;
+      border: none;
+      padding: 10px 24px;
+      font-size: 1rem;
+      font-weight: 500;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+    }
+
+    .btn:hover {
+      background-color: #1d4ed8;
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    .answer {
+      display: none;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px dashed #e2e8f0;
+      font-size: 1.2rem;
+      color: #2563eb;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="joke-card">
+    <span class="tag">每週笑話</span>
+    <p class="question"><strong></strong>有一天，因為小明腳不舒服，所以他去醫院，醫生跟他說:你的膝蓋正在發炎。</p>
+    
+    <button class="btn" onclick="toggleAnswer(this)">看結果</button>
+    
+    <p id="answer" class="answer"><strong>答案：</strong></p>
+  </div>
+
+  <script>結果
+    function toggleAnswer(btn) {
+      const answer = document.getElementById('answer');
+      if (answer.style.display === 'block') {
+        answer.style.display = 'none';
+        btn.textContent = '看答案';
+      } else {
+        answer.style.display = 'block';
+        btn.textContent = '隱藏答案';
+      }
+    }
+  </script>
+
+</body>
+      </html>
